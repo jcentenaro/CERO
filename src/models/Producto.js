@@ -18,10 +18,10 @@ const Producto = sequelize.define(
 (async ()=> {
     // await sequelize.sync({ force: true });
     // await sequelize.sync({ alter: true });
-    await sequelize.sync();
+    // await sequelize.sync();
 
 })();
 
-console.log('La tabla de productos fue creada exitosamente!');
+// console.log('La tabla de productos fue creada exitosamente!');
 
 module.exports = Producto;
