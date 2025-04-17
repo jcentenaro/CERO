@@ -42,7 +42,7 @@ const store = async (req, res) => {
   if (producto && req.file) {
   sharp(req.file.buffer)
   .resize
-  (1080, 1080, {
+  (800, 1200, {
     kernel: sharp.kernel.nearest,
     fit: 'contain',
     position: 'center',
@@ -96,7 +96,7 @@ const update = async (req, res) => {
       if (req.file) {
         sharp(req.file.buffer)
         .resize
-        (1080, 1080, {
+        (400, 600, {
           kernel: sharp.kernel.nearest,
           fit: 'contain',
           position: 'center',

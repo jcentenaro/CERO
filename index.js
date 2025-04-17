@@ -26,8 +26,10 @@ app.use(express.urlencoded({ extended: false }));
 
 const mainRoutes = require("./src/routes/mainRoutes");
 app.use(mainRoutes);
+app.use("/", require("./src/routes/mainRoutes.js"));
 
 app.use("/admin/productos", require("./src/routes/admin/productosRoutes"));
+app.use("/shop", require("./src/routes/shopRoutes.js"));
 
 app.use((req, res, next) => {
   res.status(404).send("La pagina no existe");

@@ -453,11 +453,22 @@ pre {
       max-width: 720px; } }
   @media (min-width: 992px) {
     .container {
-      max-width: 960px; } }
+      max-width: 960px; }
+    .col-lg-custom {
+      flex: 0 0 20%; /* 100% ÷ 5 = 20% */
+      max-width: 20%; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1140px; }
+      .col-lg-custom {
+      flex: 0 0 20%; /* 100% ÷ 5 = 20% */
+      max-width: 20%; } }
 
+      .img-prod img {
+        width: 100%;
+        height: auto;
+    }
+    
 .container-fluid {
   width: 100%;
   padding-right: 15px;
