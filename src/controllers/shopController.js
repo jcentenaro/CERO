@@ -23,7 +23,7 @@ const idView = async (req, res) => {
     const producto = await model.findByPk(req.params.id);
     console.log(producto);
     if (producto) {
-      res.render("shop/item", { values: producto });
+      res.render("shop/item", { values: producto, layout: "layouts/layout" });
     } else {
       res.status(404).send("El producto no existe");
     }
