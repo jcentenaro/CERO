@@ -8,6 +8,7 @@ const controller = require("../controllers/mainController");
 
 router.get("/", controller.index);
 router.get("/contacto", controller.contact);
+router.post("/contacto", controller.sendContactForm);
 router.get("/faqs", controller.faqs);
 router.get("/nosotros", controller.us);
 router.get("/blog", controller.blog);

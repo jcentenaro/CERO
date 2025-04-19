@@ -23,6 +23,7 @@ app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "/public")));
 
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 const mainRoutes = require("./src/routes/mainRoutes");
 app.use("/", require("./src/routes/mainRoutes.js"));
