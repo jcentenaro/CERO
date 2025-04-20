@@ -4,7 +4,7 @@ const sharp = require("sharp"); // Para controlar los cambios en las imagenes an
 // LLamo a express-validator del Rroutes
 const { validationResult } = require("express-validator");
 
-const model = require("../models/Producto")
+const model = require("../models/producto")
 
 const shopview = async (req, res) => {
   try {

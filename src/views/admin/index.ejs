@@ -2,43 +2,55 @@
     <%- include('../partials/header') %>
     <%# include('../partials/nav') %>
     <main>
-      <h1>Listado de Producto</h1>
+      <section class="prod-list-wrapper container">
 
-      <a href="/admin/productos/create">Crear</a>
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Nombre</th>
-            <!-- <th>Licencia</th> -->
-            <th>Precio</th>
-            <th>Imagen</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% productos.forEach(producto => {%>
-            <tr>
-              <td><%= producto.id %></td>
-              <td><%= producto.nombre %></td>
-              <!-- <td><%= producto.licencia %></td> -->
-              <td><%= producto.precio %></td>
-              <td><img width="150" src="/uploads/productos/producto_<%= producto.id %>.jpg" alt="<%= producto.nombre %>"></td>
-              <td><a href="/admin/productos/<%= producto.id %>/edit">Editar</a> | 
-              <form
-                class="form-delete"
-                style="display: inline-block"
-                action="/admin/productos/<%= producto.id %>?_method=DELETE"
-                method="post"
-                <button type="submit">Borrar</button>
-              </form>
-            </td>
-            </tr>
-          <%}) %>
-        </tbody>
-      </table>
+        <div class="prod-list">
+              <div class="prod-list-title-section">
+                <h1 class="prod-list-title title">LISTADO DE PRODUCTOS</h1>
+                <div class="prod-list-add">
+                  <button class="prod-list-add-button">
+                    <a href="/admin/productos/create">
+                      <i class="fa-solid fa-plus fa-xl">CREAR</i>
+                    </a>
+                  </button>
+                </div>
+              </div>
 
-      
+              <table class="prod-list-table">
+                <thead>
+                  <tr class="prod-list-row">
+                    <th class="prod-list-row-item row-item-title">#</th>
+                    <th class="prod-list-row-item row-item-title">Nombre</th>
+                    <th class="prod-list-row-item row-item-title">Descripición</th>
+                    <th class="prod-list-row-item row-item-title">Precio</th>
+                    <th class="prod-list-row-item row-item-title">Precio</th>
+                    <th class="prod-list-row-item row-item-title">Imagen</th>
+                    <th class="prod-list-row-item row-item-title"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% productos.forEach(producto => {%>
+                    <tr class="prod-list-row">
+                      <td class="prod-list-row-item row-item-added"><%= producto.id %></td>
+                      <td class="prod-list-row-item row-item-added"><%= producto.nombre %></td>
+                      <td class="prod-list-row-item row-item-added"><%# producto.nombre %></td>
+                      <td class="prod-list-row-item row-item-added"><%= producto.precio %></td>
+                      <td class="prod-list-row-item row-item-added"><img width="100" src="/uploads/productos/producto_<%= producto.id %>.jpg" alt="<%= producto.nombre %>"></td>
+                      <td class="prod-list-row-item row-item-added"><a href="/admin/productos/<%= producto.id %>/edit">Editar</a> | 
+                      <form
+                        class="form-delete"
+                        style="display: inline-block"
+                        action="/admin/productos/<%= producto.id %>?_method=DELETE"
+                        method="post"
+                        <button type="submit">Borrar</button>
+                      </form>
+                    </td>
+                    </tr>
+                  <%}) %>
+                </tbody>
+              </table>
+        </div>
+      </section>
     </main>
     <%- include('../partials/footer') %>
 

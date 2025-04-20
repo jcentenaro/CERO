@@ -8051,6 +8051,49 @@ h1, h2, h3, h4, h5,
     width: calc(100% - 30px);
     color: white; }
 
+    .prod-list-row{
+      display: grid;
+      grid-template-columns: 0.15fr 0.3fr 0.5fr 0.5fr 0.4fr 0.2fr 0.15fr;
+    }
+    
+    .prod-list-row .row-item-title{
+      font-size: var(--font-medium);
+      font-weight: 600;
+      text-align: start;
+    }
+    
+    .prod-list-row .row-item-added{
+      font-size: 16px;
+      font-weight: 400;
+      text-align: start;
+    }
+    
+    .prod-list-row .row-item-added .img-listado{
+      width: 50px;
+    }
+    .prod-list-table {
+      width: 100%;
+      padding: 0 0 0 var(--spacing-20);
+    }
+    
+    .prod-list-table tbody{
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-24);
+    }
+    
+    .prod-list-row{
+      display: grid;
+      grid-template-columns: 0.15fr 0.3fr 0.5fr 0.5fr 0.4fr 0.2fr 0.15fr;
+    }
+  
+    .prod-list-wrapper{
+      padding: var(--spacing-36) var(--spacing-128);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-24); 
+    }
+
 .ftco-navbar-light {
   background: transparent !important;
   z-index: 3;
@@ -8332,6 +8375,7 @@ h1, h2, h3, h4, h5,
   0% {
     margin-top: 20px;
     opacity: 0; } }
+
 
 .owl-carousel {
   position: relative; }
@@ -10055,3 +10099,23 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    @media screen and (max-width:1000px){
+
+      .prod-list{
+        width: 100%;
+      }
+      
+      .prod-list-wrapper{
+        padding: var(--spacing-36) var(--spacing-24);
+      }
+    
+      .prod-list-row{
+        grid-template-columns: 0.15fr 0.3fr 0.5fr 0.5fr 0.4fr 0.2fr 0.15fr;
+      }
+    
+      .prod-list-table{
+        padding: 0;
+      }
+    
+    }

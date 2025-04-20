@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("./db");
 
-const Producto = sequelize.define(
-    'Producto',
+const producto = sequelize.define(
+    'producto',
     {
     nombre: {
         type: DataTypes.STRING,
@@ -24,4 +24,4 @@ const Producto = sequelize.define(
 
 // console.log('La tabla de productos fue creada exitosamente!');
 
-module.exports = Producto;
+module.exports = producto;
