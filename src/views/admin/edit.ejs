@@ -24,6 +24,10 @@
             <input type="text"  id="nombre" name="nombre" value="<%= typeof values != 'undefined' ? values.nombre : '' %>" required minlength="3">
         </div>
         <div>
+          <label for="description" >Descripición:</label>
+          <input type="text"  id="description" name="description" value="<%= typeof values != 'undefined' ? values.description : '' %>" required minlength="3">
+      </div>
+        <div>
           <label for="precio" >Precio:</label>
           <input type="number"  id="precio" name="precio" value="<%= typeof values != 'undefined' ? values.precio : '' %>" required min="1" pattern="">
         </div>
@@ -34,7 +38,7 @@
               <img width="150" src="/uploads/productos/producto_<%= values.id %>.jpg" alt="<%= values.nombre %>">
             </div>
         </div>
-        <button type="submit">Guardar</button>
+        <button type="submit" style="position: relative; z-index: 9999;">Guardar</button>
       </form>
     </main>
     <%- include('../partials/footer') %>

@@ -23,9 +23,9 @@
                     <th class="prod-list-row-item row-item-title">Nombre</th>
                     <th class="prod-list-row-item row-item-title">Descripición</th>
                     <th class="prod-list-row-item row-item-title">Precio</th>
-                    <th class="prod-list-row-item row-item-title">Precio</th>
                     <th class="prod-list-row-item row-item-title">Imagen</th>
-                    <th class="prod-list-row-item row-item-title"></th>
+                    <th class="prod-list-row-item row-item-title">Editar</th>
+                    <!-- <th class="prod-list-row-item row-item-title"></th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -33,7 +33,7 @@
                     <tr class="prod-list-row">
                       <td class="prod-list-row-item row-item-added"><%= producto.id %></td>
                       <td class="prod-list-row-item row-item-added"><%= producto.nombre %></td>
-                      <td class="prod-list-row-item row-item-added"><%# producto.nombre %></td>
+                      <td class="prod-list-row-item row-item-added" style="font-size: 14px;" ><%- producto.description %></td>
                       <td class="prod-list-row-item row-item-added"><%= producto.precio %></td>
                       <td class="prod-list-row-item row-item-added"><img width="100" src="/uploads/productos/producto_<%= producto.id %>.jpg" alt="<%= producto.nombre %>"></td>
                       <td class="prod-list-row-item row-item-added"><a href="/admin/productos/<%= producto.id %>/edit">Editar</a> | 

@@ -8053,7 +8053,7 @@ h1, h2, h3, h4, h5,
 
     .prod-list-row{
       display: grid;
-      grid-template-columns: 0.15fr 0.3fr 0.5fr 0.5fr 0.4fr 0.2fr 0.15fr;
+      grid-template-columns: 0.1fr 0.3fr 0.8fr 0.15fr 0.3fr 0.25fr;
     }
     
     .prod-list-row .row-item-title{
@@ -8084,7 +8084,7 @@ h1, h2, h3, h4, h5,
     
     .prod-list-row{
       display: grid;
-      grid-template-columns: 0.15fr 0.3fr 0.5fr 0.5fr 0.4fr 0.2fr 0.15fr;
+      grid-template-columns: 0.1fr 0.3fr 0.9fr 0.15fr 0.275fr 0.25fr;
     }
   
     .prod-list-wrapper{
@@ -10111,7 +10111,7 @@ textarea.form-control {
       }
     
       .prod-list-row{
-        grid-template-columns: 0.15fr 0.3fr 0.5fr 0.5fr 0.4fr 0.2fr 0.15fr;
+        grid-template-columns: 0.1fr 0.3fr 0.6fr 0.3fr 0.4fr 0.2fr;
       }
     
       .prod-list-table{

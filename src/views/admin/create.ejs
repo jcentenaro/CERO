@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create</title>
-  </head>
-  <body>
+
     <%- include('../partials/header') %>
     <main>
 
-      <div class="hero-wrap hero-bread" style="background-image: url('/public/images/bg_6.jpg');">
+      <!-- <div class="hero-wrap hero-bread" style="background-image: url('/public/images/bg_6.jpg');">
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
@@ -18,8 +11,11 @@
             </div>
           </div>
         </div>
-      </div>
-      <section class="ftco-section contact-section bg-light">
+      </div> -->
+
+      <section class="ftco-section contact-section bg-light container">
+      <h2 class="create-container__title title">CREAR NUEVO PRODUCTO</h2>
+
       <!--Imprimo errores-->
       <% if (typeof errors != 'undefined') { %>
       <ul class=""list-unstyled text-danger>
@@ -37,6 +33,10 @@
             <input type="text"  id="nombre" name="nombre" class="form-control" value="<%= typeof values != 'undefined' ? values.nombre : '' %>" required minlength="3">
         </div>
         <div class="form-group">
+          <label for="description" >Descripción:</label>
+          <input type="text"  id="description" name="description" class="form-control" value="<%= typeof values != 'undefined' ? values.description : '' %>" required minlength="3" maxlength="255">
+      </div>
+        <div class="form-group">
           <label for="precio" >Precio:</label>
           <input type="number"  id="precio" name="precio" class="form-control" value="<%= typeof values != 'undefined' ? values.precio : '' %>" required min="1" pattern="">
         </div>
@@ -53,7 +53,4 @@
       </div>
       </div>
       </section>
-    </main>
-    <%- include('../partials/footer') %>
-  </body>
-</html>
+    </main>  

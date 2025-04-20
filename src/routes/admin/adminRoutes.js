@@ -21,7 +21,7 @@ const validations = [
         .withMessage("El precio es obligatorio"),
 ];
 
-const controller = require("../../controllers/admin/productoController");
+const controller = require("../../controllers/admin/adminController");
 
 // CRUD = Create, Read, Update, Delete
 

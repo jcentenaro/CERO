@@ -28,7 +28,7 @@ app.use(express.json());
 const mainRoutes = require("./src/routes/mainRoutes");
 app.use("/", require("./src/routes/mainRoutes.js"));
 
-app.use("/admin/productos", require(path.join(__dirname, "./src/routes/admin/productosRoutes")));
+app.use("/admin/productos", require(path.join(__dirname, "./src/routes/admin/adminRoutes")));
 app.use("/shop", require("./src/routes/shopRoutes.js"));
 
 app.use((req, res, next) => {
