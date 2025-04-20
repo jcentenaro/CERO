@@ -37,12 +37,18 @@ const itemView = (_req, res) => {
   res.send("Shop ITEM ID ADD");
 };
 
-// const itemView = (req, res) => {
-//   res.render("shop/item", {title: "Vista Item"});
-// };
+const cartView = (_req, res) => {
+  res.render("shop/cart");
+};
+
+const checkoutView = (_req, res) => {
+  res.render("shop/checkout");
+};
 
 module.exports = {
   shopview,
   idView,
   itemView,
+  cartView,
+  checkoutView
 };
