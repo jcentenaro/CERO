@@ -43,7 +43,8 @@
                             <div class="overlay"></div>
                         </a>
                         <div class="text py-3 px-3">
-                            <h3><a href="#"><%= producto.nombre %></a></h3>
+                            <h3 class="product-name"><a href="#"><%= producto.nombre || 'Sin nombre' %></a></h3>
+                            <p class="description"><%= producto.description %></p> <!-- Agregar descripción -->
                             <div class="d-flex">
                                 <div class="pricing">
                                     <p class="price">

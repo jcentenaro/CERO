@@ -9,8 +9,17 @@ const model = require("../models/producto")
 const shopview = async (req, res) => {
   try {
     const productos = await model.findAll();
+    // Truncar nombres a 50 caracteres
+    productos.forEach(producto => {
+      if (producto.nombre && producto.nombre.length > 50) {
+        producto.nombre = producto.nombre.substring(0, 50) + '...';
+      }
+      // Opcional: Truncar descripción también, si lo deseas
+      // if (producto.descripcion && producto.descripcion.length > 100) {
+      //   producto.descripcion = producto.descripcion.substring(0, 100) + '...';
+      // }
+    });
     console.log(productos);
-    
     res.render("shop/shop", { productos });
   } catch (error) {
     console.log(error)
@@ -38,11 +47,11 @@ const itemView = (_req, res) => {
 };
 
 const cartView = (_req, res) => {
-  res.render("shop/cart");
+  res.render("shop/cart"); // Cambiado de "/cart" a "shop/cart"
 };
 
 const checkoutView = (_req, res) => {
-  res.render("shop/checkout");
+  res.render("shop/checkout"); // Cambiado de "/checkout" a "shop/checkout"
 };
 
 module.exports = {

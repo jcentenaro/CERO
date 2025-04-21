@@ -4,12 +4,12 @@ const sequelize = require("./db");
 const producto = sequelize.define(
     'producto',
     {
-        nombre: {
+          nombre: {
             type: DataTypes.STRING,
             allowNull: false,
           },
           description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: true,
           },
           precio: {

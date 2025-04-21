@@ -8087,6 +8087,27 @@ h1, h2, h3, h4, h5,
       grid-template-columns: 0.1fr 0.3fr 0.9fr 0.15fr 0.275fr 0.25fr;
     }
   
+    .description {
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* Limita a 3 líneas */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es truncado */
+      margin-bottom: 10px; /* Espacio debajo de la descripción */
+      font-size: 14px; /* Ajusta el tamaño de fuente según tu diseño */
+      line-height: 1.5; /* Ajusta la altura de línea para que las 3 líneas se vean bien */
+  }
+  .product-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es truncado */
+    margin-bottom: 5px; /* Espacio debajo del título */
+    font-size: 16px; /* Ajusta según tu diseño */
+    line-height: 1.4; /* Altura de línea para que las 2 líneas se vean bien */
+}
+
     .prod-list-wrapper{
       padding: var(--spacing-36) var(--spacing-128);
       display: flex;
