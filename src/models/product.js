@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("./db");
 
-const producto = sequelize.define(
-    'producto',
+const product = sequelize.define(
+    'product',
     {
           nombre: {
             type: DataTypes.STRING,
@@ -33,11 +33,11 @@ const producto = sequelize.define(
 //Fuerzo la creción, alteración o borrado de la tabla en BD
 (async ()=> {
     // await sequelize.sync({ force: true });
-    // await sequelize.sync({ alter: true });
+    await sequelize.sync({ alter: true });
     // await sequelize.sync();
 
 })();
 
 // console.log('La tabla de productos fue creada exitosamente!');
 
-module.exports = producto;
+module.exports = product;

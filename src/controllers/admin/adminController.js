@@ -5,7 +5,7 @@ const sharp = require("sharp"); // Para controlar los cambios en las imagenes an
 const { validationResult } = require("express-validator");
 const { error } = require("console");
 
-const model = require("../../models/producto")
+const model = require("../../models/product")
 
 const index = async (req, res) => {
   try {

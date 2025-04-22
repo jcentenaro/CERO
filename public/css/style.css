@@ -8080,6 +8080,7 @@ h1, h2, h3, h4, h5,
       display: flex;
       flex-direction: column;
       gap: var(--spacing-24);
+      margin-bottom: 10px;
     }
     
     .prod-list-row{

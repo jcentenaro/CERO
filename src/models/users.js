@@ -1,11 +1,11 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("./db");
-
+//REQUIERO BCRYPTJS PARA ENCRIPTAR LA CLAVE
 const bcryptjs = require("bcryptjs");
 
 const users = sequelize.define("user", {
    
-  nombre: {
+  name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -23,15 +23,16 @@ const users = sequelize.define("user", {
   users.beforeSave(async (user, options) => {
     const { password } = user;
 
-    const hash = await bcryptjs.hash(password, 8);
+    const hash = await bcryptjs.hash(password, 12);
 
     user.password = hash
   });
 // FINAL bcryptjs
 
+//FUERZO LA CREACIÓN, ACTUALIZACIÓN O ELIMINACIÓN DE LA TABLA
   // (async () => {
-  //   await sequelize.sync();
-  //  await sequelize.sync({ force: true });
+  // await sequelize.sync();
+  // //  await sequelize.sync({ force: true });
   //   // await sequelize.sync({ alter: true });
   // })();
   
