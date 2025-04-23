@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="/css/flaticon.css">
     <link rel="stylesheet" href="/css/icomoon.css">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body class="goto-here">
 
@@ -58,6 +60,48 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="/js/google-map.js"></script>
   <script src="/js/main.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.my-products-carousel', {
+        slidesPerView: 5, // Muestra exactamente 5 productos por defecto
+        spaceBetween: 20, // Espacio entre los productos
+        slidesPerGroup: 1, // Avanza de 1 en 1 al deslizar para un movimiento más suave
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          // Ajustes para diferentes tamaños de pantalla
+          1200: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
+      });
+    });
+  </script>
     
   </body>
 </html>

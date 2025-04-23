@@ -2,9 +2,26 @@
 const nodemailer = require("nodemailer");
 //requiero la conexión a bd
 const db = require("../config/db");
+// Importo el modelo de productos
+const model = require("../models/product");
  
-const index = (req, res) => {
-  res.render("inicio", { title: "Título desde el Controller" });
+const index = async (req, res) => {
+  try {
+    const productos = await model.findAll(); // Obtiene los productos desde la base de datos
+    // Truncar nombres a 50 caracteres, como en shopController
+    productos.forEach(producto => {
+      if (producto.nombre && producto.nombre.length > 50) {
+        producto.nombre = producto.nombre.substring(0, 50) + '...';
+      }
+    });
+    res.render("inicio", { 
+      title: "Título desde el Controller",
+      productos // Pasa los productos a la vista
+    });
+  } catch (error) {
+    console.error("Error al cargar productos:", error);
+    res.status(500).send("Error al cargar la página de inicio");
+  }
 };
 
 const home = (req, res) => {

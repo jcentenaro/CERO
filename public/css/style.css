@@ -10140,4 +10140,32 @@ textarea.form-control {
         padding: 0;
       }
     
+      .my-products-carousel {
+        width: 100%;
+        padding: 20px 0;
+        overflow: hidden; /* Asegura que los slides fuera de la vista no se muestren */
+      }
+      .swiper-wrapper {
+        display: flex;
+        align-items: stretch;
+      }
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20% !important; /* Forzar 5 slides: 100% / 5 = 20% */
+        min-width: 220px; /* Ancho mínimo para cada producto */
+        box-sizing: border-box;
+      }
+      .product {
+        width: 100%;
+        max-width: 220px; /* Ajusta según el diseño original */
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #000; /* Ajusta el color de las flechas */
+      }
+      .swiper-pagination-bullet-active {
+        background: #000; /* Ajusta el color de la paginación */
+      }
     }

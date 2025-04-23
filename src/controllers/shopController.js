@@ -4,7 +4,7 @@ const sharp = require("sharp"); // Para controlar los cambios en las imagenes an
 // LLamo a express-validator del Rroutes
 const { validationResult } = require("express-validator");
 
-const model = require("../models/product")
+const model = require("../models/product");
 
 const shopview = async (req, res) => {
   try {
@@ -14,25 +14,30 @@ const shopview = async (req, res) => {
       if (producto.nombre && producto.nombre.length > 50) {
         producto.nombre = producto.nombre.substring(0, 50) + '...';
       }
-      // Opcional: Truncar descripción también, si lo deseas
-      // if (producto.descripcion && producto.descripcion.length > 100) {
-      //   producto.descripcion = producto.descripcion.substring(0, 100) + '...';
-      // }
     });
-    console.log(productos);
     res.render("shop/shop", { productos });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     res.status(500).send(error);
   }
 };
 
 const idView = async (req, res) => {
   try {
-    const producto = await model.findByPk(req.params.id);
-    console.log(producto);
+    const producto = await model.findByPk(req.params.id); // Obtiene el producto individual
+    const productos = await model.findAll(); // Obtiene todos los productos para el partial
+    // Truncar nombres a 50 caracteres
+    productos.forEach(producto => {
+      if (producto.nombre && producto.nombre.length > 50) {
+        producto.nombre = producto.nombre.substring(0, 50) + '...';
+      }
+    });
     if (producto) {
-      res.render("shop/item", { values: producto, layout: "layouts/layout" });
+      res.render("shop/item", { 
+        values: producto, 
+        productos, // Pasa la lista de productos para el partial
+        layout: "layouts/layout" 
+      });
     } else {
       res.status(404).send("El producto no existe");
     }

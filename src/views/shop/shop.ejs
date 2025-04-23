@@ -41,51 +41,51 @@
         <div class="container">
             <div class="row">
                 <% productos.forEach(producto => { %>
-                <div class="col-sm-6 col-md-4 col-lg-3 ftco-animate">
-                    <div class="product">
-                        
-                        <a href="/shop/item/<%= producto.id %>" class="img-prod"
-                            ><img class="img-fluid" src="/uploads/productos/producto_<%=
-                            producto.id %>.jpg" alt="<%= producto.nombre %>" /> <% if
-                            (producto.typeId === 1) { %>
-                            <!-- Verificar si el typeId es igual a 1 -->
-                            <span class="status">30%</span>
-                            <!-- Mostrar etiqueta solo si es igual a 1 -->
-                            <% } %>
-                            <div class="overlay"></div>
-                        </a>
-                        <div class="text py-3 px-3">
-                            <h3 class="product-name"><a href="#"><%= producto.nombre || 'Sin nombre' %></a></h3>
-                            <p class="description"><%= producto.description %></p> <!-- Agregar descripción -->
-                            <div class="d-flex">
-                                <div class="pricing">
-                                    <p class="price">
-                                    <span class="mr-2 price-dc">$ <%= producto.precio %>.-</span
-                                    ></p>
-                                    <p><span class="price-sale">$80.00</span></p>
-                                </div>
-                                <div class="rating">
-                                    <p class="text-right">
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="bottom-area d-flex px-3">
-                            <a href="#" class="add-to-cart text-center py-2 mr-1"
-                                ><span>Agregar a Carrito <i class="ion-ios-add ml-1"></i></span
-                            ></a>
-                            <a href="#" class="buy-now text-center py-2"
-                                >Buy now<span><i class="ion-ios-cart ml-1"></i></span
-                            ></a>
-                            </p>
+                    <div class="col-sm-6 col-md-4 col-lg-3 ftco-animate">
+                        <div class="product">
                             
+                            <a href="/shop/item/<%= producto.id %>" class="img-prod"
+                                ><img class="img-fluid" src="/uploads/productos/producto_<%=
+                                producto.id %>.jpg" alt="<%= producto.nombre %>" /> <% if
+                                (producto.typeId === 1) { %>
+                                <!-- Verificar si el typeId es igual a 1 -->
+                                <span class="status">30%</span>
+                                <!-- Mostrar etiqueta solo si es igual a 1 -->
+                                <% } %>
+                                <div class="overlay"></div>
+                            </a>
+                            <div class="text py-3 px-3">
+                                <h3 class="product-name"><a href="#"><%= producto.nombre || 'Sin nombre' %></a></h3>
+                                <p class="description"><%= producto.description %></p> <!-- Agregar descripción -->
+                                <div class="d-flex">
+                                    <div class="pricing">
+                                        <p class="price">
+                                        <span class="mr-2 price-dc">$ <%= producto.precio %>.-</span
+                                        ></p>
+                                        <p><span class="price-sale">$80.00</span></p>
+                                    </div>
+                                    <div class="rating">
+                                        <p class="text-right">
+                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="bottom-area d-flex px-3">
+                                <a href="#" class="add-to-cart text-center py-2 mr-1"
+                                    ><span>Agregar a Carrito <i class="ion-ios-add ml-1"></i></span
+                                ></a>
+                                <a href="#" class="buy-now text-center py-2"
+                                    >Buy now<span><i class="ion-ios-cart ml-1"></i></span
+                                ></a>
+                                </p>
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
                 <% }) %>
             </div>
         </div>

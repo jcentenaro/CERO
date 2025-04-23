@@ -31,12 +31,12 @@ const product = sequelize.define(
 });
 
 //Fuerzo la creción, alteración o borrado de la tabla en BD
-(async ()=> {
-    // await sequelize.sync({ force: true });
-    await sequelize.sync({ alter: true });
-    // await sequelize.sync();
+// (async ()=> {
+//     // await sequelize.sync({ force: true });
+//     await sequelize.sync({ alter: true });
+//     // await sequelize.sync();
 
-})();
+// })();
 
 // console.log('La tabla de productos fue creada exitosamente!');
 
